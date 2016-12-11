@@ -20,16 +20,16 @@ module.exports = webpackMerge(commonConfig, {
     },
 
     plugins: [
-        new webpack.NoErrorsPlugin(),
-        new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.UglifyJsPlugin({
-            mangle: {
-                keep_fnames: true
-            }
-        }),
+        // new webpack.NoErrorsPlugin(),
+        // new webpack.optimize.DedupePlugin(),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     mangle: {
+        //         keep_fnames: true
+        //     }
+        // }),
         new ExtractTextPlugin('[name].css'),
         new webpack.DefinePlugin({
-            PLAYGROUND: JSON.stringify({
+            SPLITWISE: JSON.stringify({
                 ENV: 'PRODUCTION',
                 INFO: commonConfig.meta
             })

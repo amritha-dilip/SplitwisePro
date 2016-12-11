@@ -1,0 +1,8 @@
+{
+  "globalDependencies": {
+    "crypto-js": "registry:dt/crypto-js#3.1.4+20160708041433",
+    "lodash": "registry:dt/lodash#4.14.0+20161110215204",
+    "whatwg-fetch": "registry:dt/whatwg-fetch#0.0.0+20161004182750",
+    "whatwg-streams": "registry:dt/whatwg-streams#0.0.0+20160829180742"
+  }
+}

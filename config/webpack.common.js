@@ -14,6 +14,7 @@ var meta = (function() {
         name: 'Splitwise Pro',
         version: package.version,
         build: timestamp,
+        author: 'Amritha & Bhargav',
         full_version: `${package.version}.${timestamp}`
     };
 })();
@@ -22,7 +23,7 @@ module.exports = {
     entry: {
         'polyfills': './src/polyfills.ts',
         'vendor': './src/vendor.ts',
-        'app': './src/app.module.ts',
+        'app': './src/app.ts',
     },
 
     resolve: {
@@ -37,13 +38,12 @@ module.exports = {
             },
             {
                 test: /\.ts$/,
-                loaders: ['awesome-typescript-loader'],
+                loader: 'ts',
                 exclude: /node_modules/
             },
             {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('css!postcss!sass'),
-                exclude: /theme/
+                loader: ExtractTextPlugin.extract('css!postcss!sass')
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
