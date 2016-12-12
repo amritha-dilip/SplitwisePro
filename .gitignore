@@ -104,4 +104,4 @@ packages/**
 build/**
 typings/**
 .vscode/**
-
+npm-debug.log.*

@@ -1,6 +1,6 @@
 'use strict'
 
-import { AppRegistry } from 'react-native';
-import SplitwisePro from './build'
+import { AppRegistry } from 'react-native'
+import App from './build/app'
 
-AppRegistry.registerComponent('SplitwisePro', () => SplitwisePro);
+AppRegistry.registerComponent('SplitwisePro', () => App)
