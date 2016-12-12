@@ -2,6 +2,8 @@
   "globalDependencies": {
     "lodash": "registry:dt/lodash#4.14.0+20161110215204",
     "react": "registry:dt/react#0.14.0+20161203201537",
-    "react-native": "registry:dt/react-native#0.34.0+20161025173646"
+    "react-native": "registry:dt/react-native#0.34.0+20161025173646",
+    "whatwg-fetch": "registry:dt/whatwg-fetch#0.0.0+20161004182750",
+    "whatwg-streams": "registry:dt/whatwg-streams#0.0.0+20160829180742"
   }
 }

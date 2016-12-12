@@ -10,7 +10,7 @@ export class ApplicationError extends Error {
     */
     constructor(message: string, public innerError?: Error) {
         super(message);
-        this.name = 'Playground Error';
+        this.name = 'Application Error';
         this.message = message;
         if ((Error as any).captureStackTrace) {
             (Error as any).captureStackTrace(this, this.constructor);

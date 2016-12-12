@@ -9,7 +9,6 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": true,
     "preserveConstEnums": true,
     "noEmitOnError": true,
     "rootDir": "src",

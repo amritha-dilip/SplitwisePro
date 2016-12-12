@@ -56,7 +56,7 @@ export class Http {
             headers = extend({}, headers, additionalHeaders.lookup());
         }
 
-        let options = <RequestInit>{
+        let options: any = <RequestInit>{
             method,
             headers
         };

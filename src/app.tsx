@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     } as React.ViewStyle,
 });
 
-export default class SplitwisePro extends Component<any, any> {
+export default class App extends Component<any, any> {
     render() {
         return (
             <View style={styles.container}>
