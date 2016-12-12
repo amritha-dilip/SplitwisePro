@@ -1,59 +1,45 @@
 {
-  "name": "splitwise-pro",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "tsc": "tsc -p tsconfig.json",
-    "start": "webpack-dev-server --config config/webpack.dev.js --progress",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/amrithadilip/SplitwisePro.git"
-  },
-  "contributors": [
-    "@amrithadilip (https://github.com/amrithadilip)",
-    "@wrathofzombies (https://github.com/wrathofzombies)"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/amrithadilip/SplitwisePro/issues"
-  },
-  "homepage": "https://github.com/amrithadilip/SplitwisePro#readme",
-  "dependencies": {
-    "reselect": "^2.5.4",
-    "core-js": "^2.4.1",
-    "cuid": "^1.3.8",
-    "lodash": "^4.17.2",
-    "rxjs": "5.0.0-rc.5",
-    "typescript": "^2.1.4",
-    "typings": "^2.0.0",
-    "crypto-js": "^3.1.8",
-    "@microsoft/office-js-helpers": "^0.3.4"
-  },
-  "devDependencies": {
-    "autoprefixer": "^6.5.3",
-    "ts-loader": "^1.3.1",
-    "copy-webpack-plugin": "3.0.1",
-    "css-loader": "^0.26.0",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.9.0",
-    "html-loader": "^0.4.4",
-    "html-webpack-plugin": "^2.24.1",
-    "node-sass": "^3.13.0",
-    "perfectionist": "^2.3.1",
-    "postcss-loader": "^1.1.1",
-    "precss": "^1.4.0",
-    "raw-loader": "^0.5.1",
-    "resolve-url-loader": "^1.6.0",
-    "rimraf": "^2.5.4",
-    "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1",
-    "webpack-dev-server": "^1.16.2",
-    "webpack-merge": "^0.15.0",
-    "webpack": "^1.13.3",
-    "tslint": "^4.0.2",
-    "whatwg-fetch": "^2.0.1"
-  }
+    "name": "splitwise-pro",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "preinstall": "rimraf typings",
+        "postinstall": "node node_modules/typings/dist/bin.js install",
+        "default": "node node_modules/react-native/local-cli/cli.js start",
+        "android": "node node_modules/react-native/local-cli/cli.js run-android",
+        "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+        "prebuild": "rimraf build",
+        "tsc": "tsc -p tsconfig.json",
+        "tsc-w": "tsc -p tsconfig.json -w",
+        "start": "npm run tsc && concurrently \"npm run tsc-w\" \"npm run default\" \"npm run android\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/amrithadilip/SplitwisePro.git"
+    },
+    "contributors": [
+        "@amrithadilip (https://github.com/amrithadilip)",
+        "@wrathofzombies (https://github.com/wrathofzombies)"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/amrithadilip/SplitwisePro/issues"
+    },
+    "homepage": "https://github.com/amrithadilip/SplitwisePro#readme",
+    "dependencies": {
+        "reselect": "^2.5.4",
+        "cuid": "^1.3.8",
+        "lodash": "^4.17.2",
+        "rxjs": "5.0.0-rc.5",
+        "@microsoft/office-js-helpers": "^0.3.4",
+        "react": "^15.4.1",
+        "react-native": "^0.39.2"
+    },
+    "devDependencies": {
+        "concurrently": "^3.1.0",
+        "typescript": "^2.1.4",
+        "tslint": "^4.0.2",
+        "typings": "^2.0.0"
+    }
 }
